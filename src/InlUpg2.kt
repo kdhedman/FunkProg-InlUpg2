@@ -6,7 +6,7 @@ fun main() {
 
     input.map {
         for((index, value) in it.split(" ").withIndex()){
-            if(index > 0)
+            if(index == 1)
                 tomteMap.put(
                     it.split(" ")[0],
                     it.split(" ").filterIndexed({index, _ -> index>0 }).toList()
@@ -32,8 +32,4 @@ fun listSubordinates(hashMap: Map<String, List<String>>,entry: String) : Mutable
     } else {
         return mutableListOf()
     }
-}
-
-class Tomte(private val name: String) {
-    override fun toString(): String = name
 }
